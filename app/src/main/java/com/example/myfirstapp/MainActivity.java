@@ -57,10 +57,10 @@ public class MainActivity extends AppCompatActivity{
         //String joined = joiner.toString(); // "foo,bar,baz"
     }
 
-    public void addSubscription(View view){
+    //public void addSubscription(View view){
        // Subscription newSub = new Subscription(name, date, cost);
 
-    }
+    //}
 
     public void createSub(View view){
         Intent intent = new Intent( this, new_subscription.class);
