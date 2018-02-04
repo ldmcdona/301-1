@@ -6,3 +6,5 @@ This is my assignment 1 submission for CMPUT 301.
 I recieved assistance from Logan Yue who helped me learn and understand more about android studio and about java as a language. 
 
 Currently the app will only take 1 subscription that does not persist after closing, and that will be over-written if another subscription is added. There is currently no functionally to view subscriptions in detail, additionally the app will crash if a non-integer value is given for cost or if there is no argument given for name, date, or cost. 
+
+Git was giving me some trouble, so I have included the apk file in the folder labeled "apk".
