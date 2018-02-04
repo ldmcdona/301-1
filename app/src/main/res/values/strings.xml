@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Assignment 1</string>
+    <string name="sub_name">Subscription Name</string>
+    <string name="sub_date">Subscription Date</string>
+    <string name="sub_cost">Subscription Cost</string>
+    <string name="sub_comment">Comment</string>
+    <string name="add_sub">Add Subscription</string>
+</resources>
