@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -25,6 +26,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         oldSub = (ListView) findViewById(R.id.SubscriptionList);
+
+        oldSub.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> list, View v, int pos, long id) {
+                Intent change = new Intent( v.getContext(), EditSub.class);
+                Object subClicked = oldSub.getItemAtPosition(pos);
+                Subscription clicked = (Subscription) subClicked;
+                String sname = clicked.getName();
+                String sdate = clicked.getDate();
+                int scost = clicked.getCost();
+
+                change.putExtra("subname", sname);
+                change.putExtra("subcost", scost);
+                change.putExtra("subdate", sdate);
+
+                startActivityForResult(change,1);
+            }
+        });
     }
 
     public void createSub(View view) {
@@ -51,6 +70,12 @@ public class MainActivity extends AppCompatActivity {
                             android.R.layout.simple_list_item_1, subList);
                     oldSub.setAdapter(adapter1);
                 }
+            }
+            else if(resultCode == 2){
+                //Update
+            }
+            else if(resultCode == 3){
+                //Delete
             }
         }
     }

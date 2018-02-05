@@ -5,4 +5,7 @@
     <string name="sub_cost">Subscription Cost</string>
     <string name="sub_comment">Comment</string>
     <string name="add_sub">Add Subscription</string>
+    <string name="title_activity_edit_sub">EditSub</string>
+    <string name="edit_sub">Save Changes</string>
+    <string name="del_sub">Delete Subscription</string>
 </resources>
