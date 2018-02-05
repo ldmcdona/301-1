@@ -40,4 +40,9 @@ public class Subscription {
     public String getComment(){
         return comment;
     }
+
+    @Override
+    public String toString(){
+        return name + '\n' + date + '\n' + cost;
+    }
 }

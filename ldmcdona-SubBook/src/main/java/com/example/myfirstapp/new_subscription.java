@@ -15,11 +15,6 @@ public class new_subscription extends AppCompatActivity {
     private EditText date;
     private EditText cost;
     private EditText comment;
-    private String subname;
-    private String subdate;
-    private int subcost;
-    private String subcomment;
-    private ArrayList<Subscription> subList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,19 +28,19 @@ public class new_subscription extends AppCompatActivity {
         final Button button = findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                String message = "testing";
-                TextView test = findViewById(R.id.textView);
-                test.setText(message);
+
 
                 String subname = name.getText().toString();
                 String subdate = date.getText().toString();
-                int subcost = Integer.parseInt(cost.getText().toString());
+                String subcost = cost.getText().toString();
 
-                Intent newintent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent newintent = new Intent();
                 newintent.putExtra( "subname", subname);
                 newintent.putExtra( "subcost", subcost);
                 newintent.putExtra( "subdate", subdate);
-                startActivity(newintent);
+            //    newintent.putExtra()
+                setResult(1, newintent);
+                finish();
             }
         });
 
