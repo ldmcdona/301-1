@@ -5,7 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/301-1.iml" filepath="$PROJECT_DIR$/301-1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Subscription_old.iml" filepath="$PROJECT_DIR$/Subscription_old.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ldmcdona-SubBook.iml" filepath="$PROJECT_DIR$/ldmcdona-SubBook.iml" />
       <module fileurl="file://$PROJECT_DIR$/ldmcdona-SubBook/ldmcdona-SubBook.iml" filepath="$PROJECT_DIR$/ldmcdona-SubBook/ldmcdona-SubBook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ldmcdona-SubBook/ldmcdona-SubBook-ldmcdona-SubBook.iml" filepath="$PROJECT_DIR$/ldmcdona-SubBook/ldmcdona-SubBook-ldmcdona-SubBook.iml" />
     </modules>
   </component>
 </project>

@@ -17,9 +17,7 @@ import java.util.StringJoiner;
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Subscription> subList = new ArrayList<Subscription>();
-    private ArrayAdapter<Subscription> adapater;
     private ListView oldSub;
-    private ArrayList<String> printout = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
