@@ -24,6 +24,7 @@ public class new_subscription extends AppCompatActivity {
         name = (EditText) findViewById(R.id.sname);
         cost = (EditText) findViewById(R.id.scost);
         date = (EditText) findViewById(R.id.sdate);
+        comment = (EditText) findViewById(R.id.scomment);
 
         final Button button = findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
@@ -33,11 +34,13 @@ public class new_subscription extends AppCompatActivity {
                 String subname = name.getText().toString();
                 String subdate = date.getText().toString();
                 String subcost = cost.getText().toString();
+                String subcomment = comment.getText().toString();
 
                 Intent newintent = new Intent();
                 newintent.putExtra( "subname", subname);
                 newintent.putExtra( "subcost", subcost);
                 newintent.putExtra( "subdate", subdate);
+                newintent.putExtra( "subcomment", subcomment);
             //    newintent.putExtra()
                 setResult(1, newintent);
                 finish();

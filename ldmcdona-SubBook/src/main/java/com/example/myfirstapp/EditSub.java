@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class EditSub extends AppCompatActivity {
     private EditText name;
@@ -13,14 +14,30 @@ public class EditSub extends AppCompatActivity {
     private EditText cost;
     private EditText comment;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_sub);
 
+        Intent passed = getIntent();
+
+        String passedname = passed.getStringExtra("sname");
+        String passeddate = passed.getStringExtra("sdate");
+        //int passedcost = passed.getIntExtra("scost", 0);
+        String passedcomment = passed.getStringExtra("scomment");
+//        TextView sname = (TextView) findViewById(R.id.namet);
+//        sname.setText(passedname);
+
         name = (EditText) findViewById(R.id.namet);
         cost = (EditText) findViewById(R.id.costt);
         date = (EditText) findViewById(R.id.datet);
+        comment = (EditText) findViewById(R.id.commentt);
+
+        name.setText(passedname);
+        date.setText(passeddate);
+        //cost.setText(passedcost);
+        comment.setText(passedcomment);
 
         final Button button1 = findViewById(R.id.save);
         button1.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +57,7 @@ public class EditSub extends AppCompatActivity {
             }
         });
 
-        final Button button2 = findViewById(R.id.save);
+        final Button button2 = findViewById(R.id.delete);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 

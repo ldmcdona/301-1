@@ -43,6 +43,6 @@ public class Subscription {
 
     @Override
     public String toString(){
-        return name + '\n' + date + '\n' + cost;
+        return name + '\n' + date + '\n' + "$" + cost;
     }
 }

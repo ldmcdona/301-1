@@ -36,10 +36,12 @@ public class MainActivity extends AppCompatActivity {
                 String sname = clicked.getName();
                 String sdate = clicked.getDate();
                 int scost = clicked.getCost();
+                String scomment = clicked.getComment();
 
-                change.putExtra("subname", sname);
-                change.putExtra("subcost", scost);
-                change.putExtra("subdate", sdate);
+                change.putExtra("sname", sname);
+                change.putExtra("scost", scost);
+                change.putExtra("sdate", sdate);
+                change.putExtra("scomment", scomment);
 
                 startActivityForResult(change,1);
             }
@@ -61,8 +63,9 @@ public class MainActivity extends AppCompatActivity {
                     String name = data.getStringExtra("subname");
                     String date = data.getStringExtra("subdate");
                     int cost = Integer.parseInt(data.getStringExtra("subcost"));
+                    String comment = data.getStringExtra("subcomment");
 
-                    Subscription newSub = new Subscription(name, date, cost);
+                    Subscription newSub = new Subscription(name, date, cost, comment);
 
                     subList.add(newSub);
 
